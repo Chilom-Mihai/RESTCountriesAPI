@@ -1,0 +1,162 @@
+.big {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.back a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 80px;
+  background-color: #2b3844;
+  margin-top: 160px;
+  width: 160px;
+}
+
+.back button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.back img {
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 80px;
+  margin-top: 80px;
+}
+
+.flag img {
+  width: 560px;
+  height: 401px;
+}
+
+.name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 23px;
+  font-size: 32px;
+  height: 44px;
+}
+
+.details {
+  margin-left: 144px;
+  color: white;
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 16px;
+  height: 24px;
+  margin-top: 30px;
+}
+
+.border h2 {
+  margin: 0;
+}
+
+.border p {
+  margin: 0 0 0 15px;
+  background-color: hsl(209, 23%, 22%);
+  height: 20px;
+  padding: 5px 30px;
+}
+
+.informations {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 150px;
+  color: white;
+}
+
+.details__country {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-info {
+  display: flex;
+}
+
+.info2 {
+  margin-left: 70px;
+}
+
+.country__name {
+  font-size: 32px;
+  width: auto;
+}
+
+.country__name h3 {
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .flag img {
+    width: 100%;
+    height: auto;
+  }
+
+  .name {
+    margin-left: 20px;
+  }
+
+  .details {
+    margin: 20px;
+  }
+
+  .border {
+    flex-wrap: wrap;
+  }
+
+  .informations {
+    padding: 20px;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .info2 {
+    margin-left: 0;
+  }
+}

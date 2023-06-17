@@ -1,0 +1,17 @@
+.header {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 0 15px;
+  padding: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+<div class="search__filter">
+  <div class="search">
+    <i class="fa-solid fa-magnifying-glass" style="color: #fcfcfc"></i>
+    <input
+      type="text"
+      placeholder="Search for a country..."
+      [(ngModel)]="searchQuery"
+      (input)="filterCountriesByName()"
+    />
+  </div>
+  <div class="filter">
+    <label class="filter-label">
+      Filter Region
+      <img src="../../assets/arrow-down.svg" alt="Arrow Down" />
+    </label>
+    <select [(ngModel)]="region" (change)="filterCountriesByRegion()">
+      <option value="" disabled selected hidden>Select region</option>
+      <option value="all">All</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
+      <option value="Asia">Asia</option>
+      <option value="Africa">Africa</option>
+      <option value="Polar">Polar</option>
+      <option value="Americas">America</option>
+    </select>
+  </div>
+</div>
+
+<div class="container">
+  <div class="country" *ngFor="let country of filteredCountries">
+    <div
+      class="flag"
+      [ngStyle]="{ 'background-image': 'url(' + country.flags.png + ')' }"
+    >
+      <!-- <img [src]="country.flags.svg" alt="Flag" /> -->
+    </div>
+
+    <div class="informations">
+      <div class="title">
+        <a [routerLink]="'/country-detail/' + country.name">
+          <p>{{ country.name }}</p>
+        </a>
+      </div>
+      <div class="details">
+        <h4>
+          Population:
+          <p>{{ country.population }}</p>
+        </h4>
+        <h4>
+          Region:
+          <p>{{ country.region }}</p>
+        </h4>
+        <h4>
+          Capital:
+          <p>{{ country.capital }}</p>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>

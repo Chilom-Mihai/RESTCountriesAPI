@@ -1,0 +1,53 @@
+<div class="big">
+  <div class="back">
+    <a routerLink="/">
+      <img src="../../assets/arrow-left.svg" alt="" />
+      <button>Back</button>
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="flag">
+      <img [src]="country?.flags.png" alt="flag" />
+    </div>
+    <div class="content">
+      <div class="country__name">
+        <h3>{{ country?.name }}</h3>
+      </div>
+      <div class="details__country">
+        <div class="country-info">
+          <div class="info1">
+            <h3>Native Name: {{ country?.nativeName }}</h3>
+            <h3>Population: {{ country?.population }}</h3>
+            <h3>Region: {{ country?.region }}</h3>
+            <h3>Sub Region: {{ country?.subregion }}</h3>
+            <h3>Capital: {{ country?.capital }}</h3>
+          </div>
+          <div class="info2">
+            <h3>Top Level Domain: {{ country?.topLevelDomain }}</h3>
+            <h3>
+              Currencies:
+              <span *ngFor="let currency of country?.currencies">
+                {{ currency.name }} ({{ currency.symbol }})
+              </span>
+            </h3>
+            <h3>
+              Languages:
+              <span *ngFor="let language of country?.languages">
+                {{ language.name }} ({{ language.nativeName }})
+              </span>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="border">
+        <h2>Border Countries:</h2>
+        <div *ngFor="let border of country?.borders">
+          <p>
+            {{ border }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

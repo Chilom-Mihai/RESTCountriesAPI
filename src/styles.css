@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Source+Sans+Pro&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans";
+  font-weight: 300 600 800;
+  background-color: hsl(207, 26%, 17%);
+}
+
